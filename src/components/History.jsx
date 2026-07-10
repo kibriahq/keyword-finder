@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function History({ data }) {
-
+    console.log(data)
     return (
         <div>
             <div className="flex flex-col text-center w-full mt-10 px-5">
@@ -27,7 +27,7 @@ export default function History({ data }) {
                         {data.map(item => (
                             <tr key={item.id} className="bg-white border-b">
                                 <th scope="row" className="px-6 py-4 font-medium text-gray-600 whitespace-nowrap capitalize">
-                                    {item.title}
+                                    {item.title || (<span className="text-gray-400">No Title</span>)}
                                 </th>
                                 <td className="px-6 py-4 text-end">
                                     <Link to={`/${item.id}`} className=" rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">View Details</Link>

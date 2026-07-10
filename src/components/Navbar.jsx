@@ -36,13 +36,13 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <Link to="/">
                     <img
-                      className="h-8 w-auto"
-                      src="./keyword_logo.png"
+                      className="h-12 w-auto"
+                      src="./keyword.png"
                       alt="Your Company"
                     />
                   </Link>
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:flex items-center ">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
@@ -63,7 +63,7 @@ export default function Navbar() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <Link to="/" className="flex  justify-center items-center gap-1 rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                   <PlusIcon className="h-5 w-5 font-bold" />
-                  <span className="text-md">Generate New</span>
+                  <span className="text-md"><span className="hidden sm:inline">Generate</span> New</span>
                 </Link>
 
               </div>
